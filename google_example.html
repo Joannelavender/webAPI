@@ -41,14 +41,15 @@
           disableAutoPan: true,
         });
         // Create an array of alphabetical characters used to label the markers.
-        const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const labels = ["黃金海岸","莫里威爾士州","布爾沃里納","莫里威爾士州","黃金海岸"];
+        const marker_labels = "ABCDEF";
         // Add some markers to the map.
         const markers = locations.map((position, i) => {
           const label = labels[i % labels.length];
           const marker = new google.maps.Marker({
             position,
             label,
-            icon:" "
+            icon:"img/placeholder.png"
           });
 
           // markers can only be keyboard focusable when they have click listeners
